@@ -1,48 +1,48 @@
 export type Turbin3Prereq = {
-    address: string;
-    metadata: {
-        name: string;
-        version: string;
-        spec: string;
-        description: string;
+    "address": string;
+    "metadata": {
+        "name": string;
+        "version": string;
+        "spec": string;
+        "description": string;
     };
-    instructions: Array<{
-        name: string;
-        discriminator: number[];
-        accounts: Array<{
-            name: string;
-            writable?: boolean;
-            signer?: boolean;
-            pda?: {
-                seeds: Array<{
-                    kind: string;
-                    value?: number[];
-                    path?: string;
+    "instructions": Array<{
+        "name": string;
+        "discriminator": number[];
+        "accounts": Array<{
+            "name": string;
+            "writable"?: boolean;
+            "signer"?: boolean;
+            "pda"?: {
+                "seeds": Array<{
+                    "kind": string;
+                    "value"?: number[];
+                    "path"?: string;
                 }>;
             };
-            address?: string;
+            "address"?: string;
         }>;
-        args: Array<{
-            name: string;
-            type: string;
+        "args": Array<{
+            "name": string;
+            "type": string;
         }>;
     }>;
-    accounts: Array<{
-        name: string;
-        discriminator: number[];
+    "accounts"?: Array<{
+        "name": string;
+        "discriminator": number[];
     }>;
-    errors: Array<{
-        code: number;
-        name: string;
-        msg: string;
+    "errors"?: Array<{
+        "code": number;
+        "name": string;
+        "msg": string;
     }>;
-    types: Array<{
-        name: string;
-        type: {
-            kind: string;
-            fields: Array<{
-                name: string;
-                type: string;
+    "types"?: Array<{
+        "name": string;
+        "type": {
+            "kind": string;
+            "fields": Array<{
+                "name": string;
+                "type": string;
             }>;
         };
     }>;
